@@ -1,0 +1,135 @@
+/* COLORS */
+:root {
+  --green: #91d36b;
+  --orange: #fc9b1b;
+  --lightGrey: #999;
+  --grey: #444;
+  --drakGrey: #333;
+}
+a {
+  text-decoration: none !important;
+  color: #333;
+  transition: all 200ms ease-in;
+}
+.header {
+  padding: 50px 0;
+}
+.header__container {
+  max-width: 1540px;
+  width: 100%;
+  padding: 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header__nav ul li {
+  margin-right: 14px !important;
+}
+.header__list {
+  padding-left: 0;
+  list-style: none;
+}
+.header__list-item {
+  display: inline-block;
+}
+.header__ham-menu {
+  cursor: pointer;
+  height: 25px;
+  width: 30px;
+  position: relative;
+  z-index: 100;
+  transition: all 300ms ease-in-out;
+}
+.header__ham-menu-icon {
+  background-color: #333;
+  position: absolute;
+  height: 3px;
+  top: 10px;
+  width: 30px;
+  z-index: 10;
+  transition: all 300ms ease-in-out;
+}
+.header__ham-menu-icon::before {
+  top: -10px;
+  transition: all 300ms ease-in-out;
+}
+.header__ham-menu-icon::after {
+  top: 10px;
+  transition: all 300ms ease-in-out;
+}
+.header__ham-menu-icon::before,
+.header__ham-menu-icon::after {
+  background-color: #333;
+  content: "";
+  height: 3px;
+  width: 24px;
+  position: absolute;
+  right: 0;
+  transition: all 300ms ease-in-out;
+}
+button {
+  border-style: none;
+  padding: 0;
+  background-color: transparent;
+}
+.toggleMenu {
+  position: fixed;
+  background-color: var(--lightGrey);
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  z-index: 50;
+  will-change: transform;
+}
+.hideMenu {
+  display: none;
+}
+.header__navOptions {
+  display: flex;
+  justify-content: space-evenly;
+}
+.header__OptionsOff {
+  flex-direction: column;
+}
+.header__OptionsOff ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  font-size: 1.6rem;
+
+  width: 50%;
+  text-align: left;
+}
+.header__OptionsOff ul li a {
+  display: block;
+  padding: 0.4rem 1.8rem;
+}
+.header__OptionsOff li.header__list-item {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  .toggleMenu {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .header__navOptions {
+    display: none;
+  }
+  .header__OptionsOff {
+    text-align: left;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 930px) {
+  .header__icon {
+    display: none !important;
+  }
+  .toggleMenu {
+    display: none;
+  }
+  .hideMenu {
+    display: flex !important;
+    justify-content: space-evenly;
+  }
+}
