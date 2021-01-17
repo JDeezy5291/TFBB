@@ -13,19 +13,33 @@ a {
 }
 .header {
   padding: 50px 0;
+  margin-bottom: 30px;
 }
 .header__container {
-  max-width: 1540px;
+  /* max-width: 1540px; */
   width: 100%;
-  padding: 0 30px;
+  padding: 10px 30px;
   margin-left: auto;
   margin-right: auto;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1039;
 }
 .header__nav ul li {
   margin-right: 14px !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
 .header__list {
   padding-left: 0;
+  margin: 0;
   list-style: none;
 }
 .header__list-item {
@@ -66,6 +80,9 @@ a {
   right: 0;
   transition: all 300ms ease-in-out;
 }
+.header__scroll {
+  font-size: 1.5rem;
+}
 button {
   border-style: none;
   padding: 0;
@@ -96,7 +113,6 @@ button {
   padding: 0;
   margin: auto;
   font-size: 1.6rem;
-
   width: 50%;
   text-align: left;
 }
@@ -107,12 +123,25 @@ button {
 .header__OptionsOff li.header__list-item {
   display: block;
 }
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 639px) {
+  h1.header__logo {
+    font-size: 1.5rem;
+  }
+}
 @media screen and (min-width: 600px) {
   .toggleMenu {
     width: 45%;
   }
 }
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1139px) {
   .header__navOptions {
     display: none;
   }
@@ -121,7 +150,7 @@ button {
     width: 100%;
   }
 }
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1140px) {
   .header__icon {
     display: none !important;
   }

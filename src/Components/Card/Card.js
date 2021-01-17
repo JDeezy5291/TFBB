@@ -1,25 +1,43 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Card.css"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function Card() {
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
+    const homeData = require('../../data/homeData.json')
+
+// console.log(homeData.data.title)  
+
+// {homeData.data.map(elem => ( 
+//     <p>dwsd</p>
+// ))}
+
     return (
-        <div className="home__card">
-            <div className="home__cardHeader">
-                <h3 className="home__title">
-                    <a href="#">Item Here</a>
-                </h3>
-            </div>
-            <div className="home__cardImage">
-                <a href="#"><img src="https://demo.99colorthemes.com/aspro/wp-content/uploads/2020/05/StockSnap_TQ30QBDKB4-scaled.jpg" alt="img_1"/></a>
-            </div>
-            <div className="home__cardDesc">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis rem quia magnam nesciunt similique adipisci et, perferendis esse ab dolorum voluptatibus ullam numquam reiciendis corrupti ad optio corporis, vero praesentium?</p>
-            </div>
-            <div className="button">
-                <a href="#">check it out</a>
-            </div>
-        <div className="home__price">$700</div>
-    </div>
+        <div data-aos="fade-up" className="home__card">
+            {homeData.data.map(elem => (
+                <div>
+                    <div className="home__cardHeader">
+                        <h3 className="home__title">
+                            <a href={elem.link}>{elem.title}</a>
+                        </h3>
+                    </div>
+                    <div className="home__cardImage">
+                        <a href={elem.link}><img src={elem.image} alt="cardImage"/></a>
+                    </div>
+                    <div className="home__cardDesc">
+                        <p>{elem.desc}</p>
+                    </div>
+                    <div className="button">
+                        <a href={elem.link}>check it out</a>
+                    </div>   
+                    <div className="home__price">${elem.price}</div>
+                </div>
+            ))}
+        </div>
     )
 }
 

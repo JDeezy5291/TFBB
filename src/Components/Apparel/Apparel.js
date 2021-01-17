@@ -1,17 +1,15 @@
 import React from 'react'
-import Card from '../Card/Card'
 
-function Dumbbells() {
-
+function Apparel() {
     return (
-        <div className="dumbbells">
+        <div className="apparel">
             <div className="app__container">
                 <div className="row">
                     <div className="w-100">
                         <main className="home__main">
                             <div className="app__card-blocks">
                                 {Array.from(Array(51), (e,i) => {
-                                    return <Card />
+                                    return <Card key={i} />
                                 })}
                             </div>
                         </main>
@@ -22,4 +20,4 @@ function Dumbbells() {
     )
 }
 
-export default Dumbbells
+export default Apparel
