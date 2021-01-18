@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/Card'
+import DumbbellsCard from '../Cards/dumbbellsCard/DumbbellsCard'
 
 function Dumbbells() {
 
@@ -11,7 +11,7 @@ function Dumbbells() {
                         <main className="home__main">
                             <div className="app__card-blocks">
                                 {Array.from(Array(51), (e,i) => {
-                                    return <Card />
+                                    return <DumbbellsCard />
                                 })}
                             </div>
                         </main>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/Card'
+import BenchesCard from '../Cards/benchesCard/BenchesCard'
 
 function Benches() {
     return (
@@ -10,7 +10,7 @@ function Benches() {
                         <main className="home__main">
                             <div className="app__card-blocks">
                                 {Array.from(Array(51), (e,i) => {
-                                    return <Card key={i} />
+                                    return <BenchesCard key={i} />
                                 })}
                             </div>
                         </main>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/Card'
+import Card from '../Cards/barbellCard/barbellCard'
 import './Barbells.css'
 
 function Barbells() {

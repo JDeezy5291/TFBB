@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import Card from '../Card/Card'
+import React from 'react'
+import HomeCard from '../Cards/homeCard/HomeCard'
 
-function Home() {
-
-
-    
+function Home() {    
         return (
             <div className="home">
                 <div className="app__container">
@@ -13,7 +10,7 @@ function Home() {
                             <main className="home__main">
                                 <div className="app__card-blocks">
                                     {Array.from(Array(51), (e,i) => {
-                                        return <Card key={i}
+                                        return <HomeCard key={i}
                                         
                                         />
                                     })}

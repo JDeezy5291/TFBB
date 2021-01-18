@@ -1,20 +1,14 @@
 import React, { useEffect } from 'react'
-import "./Card.css"
+import "../Card.css"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-function Card() {
+function ApparelCard() {
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
 
-    const homeData = require('../../data/homeData.json')
-
-// console.log(homeData.data.title)  
-
-// {homeData.data.map(elem => ( 
-//     <p>dwsd</p>
-// ))}
+    const homeData = require('../../../data/homeData')
 
     return (
         <div data-aos="fade-up" className="home__card">
@@ -41,4 +35,4 @@ function Card() {
     )
 }
 
-export default Card
+export default ApparelCard

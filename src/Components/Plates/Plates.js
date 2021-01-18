@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../Card/Card'
+import PlatesCard from '../Cards/platesCard/PlatesCard'
 
 function Plates() {
     return (
@@ -10,7 +10,7 @@ function Plates() {
                         <main className="home__main">
                             <div className="app__card-blocks">
                                 {Array.from(Array(51), (e,i) => {
-                                    return <Card key={i} />
+                                    return <PlatesCard key={i} />
                                 })}
                             </div>
                         </main>

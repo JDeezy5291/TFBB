@@ -1,4 +1,5 @@
 import React from 'react'
+import ApparelCard from '../Cards/ApparelCard'
 
 function Apparel() {
     return (
@@ -9,7 +10,7 @@ function Apparel() {
                         <main className="home__main">
                             <div className="app__card-blocks">
                                 {Array.from(Array(51), (e,i) => {
-                                    return <Card key={i} />
+                                    return <ApparelCard key={i} />
                                 })}
                             </div>
                         </main>
